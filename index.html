@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe3ec">
+  <title>I'm Sorry, My Love 💗</title>
+  <style>
+    :root {
+      --pink: #f28eae;
+      --deep: #c94f7a;
+      --soft: #fff0f5;
+      --ink: #754454;
+      --cream: #fffafc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; overflow-x: hidden;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 15%, #ffffffb8 0 3px, transparent 4px),
+        radial-gradient(circle at 85% 25%, #ffffffa8 0 4px, transparent 5px),
+        linear-gradient(145deg, #ffe6ef, #fff6f8 52%, #ffdce8);
+    }
+    .wrap { width: min(850px, 92%); margin: auto; padding: 28px 0 55px; }
+    .top { text-align: center; color: var(--deep); font: 11px Arial,sans-serif; letter-spacing: .25em; text-transform: uppercase; }
+    header { text-align: center; padding: 45px 12px 18px; }
+    .eyebrow { font: 11px Arial,sans-serif; letter-spacing: .2em; text-transform: uppercase; color: #b8758d; }
+    h1 { margin: 13px 0; color: var(--deep); font-size: clamp(38px, 8vw, 65px); font-weight: 400; }
+    .intro { line-height: 1.8; color: #946477; }
+    .divider { width: 70px; height: 2px; background: #efa1ba; margin: 24px auto; border-radius: 5px; }
+    .heart-big { font-size: 48px; animation: beat 1.4s infinite; display: inline-block; }
+    @keyframes beat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+
+    .letter-card {
+      background: #ffffffd9; border: 1px solid #f6c1d2; border-radius: 24px;
+      padding: clamp(22px, 5vw, 42px); text-align: center;
+      box-shadow: 0 15px 45px #d77d9b25; backdrop-filter: blur(5px);
+    }
+    .letter-card h2 { color: var(--deep); font-weight: 400; font-size: 29px; }
+    .letter-card p { line-height: 1.9; font-size: 16px; text-align: left; }
+    .letter-card .center { text-align: center; }
+    .photo-main { width: 100%; max-height: 390px; object-fit: cover; border-radius: 17px; border: 5px solid white; box-shadow: 0 5px 20px #bd6c8a25; margin: 14px 0; background: #ffe6ef; }
+    .signature { text-align: right !important; color: var(--deep); font-style: italic; margin-top: 26px; }
+    .gallery-title { color: var(--deep); font-size: 29px; font-weight: 400; text-align: center; margin: 36px 0 8px; }
+    .gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 20px; }
+    .gallery img { width: 100%; height: 185px; object-fit: cover; border-radius: 14px; border: 4px solid white; box-shadow: 0 5px 15px #bd6c8a20; cursor: pointer; background: #ffe6ef; transition: transform .25s; }
+    .gallery img:hover { transform: translateY(-5px) rotate(-1deg); }
+    .caption { text-align: center; color: #ad7c8e; font: 12px Arial,sans-serif; margin-top: 12px; }
+    .buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 28px 0 10px; }
+    button { cursor: pointer; }
+    .btn { border: 0; border-radius: 30px; padding: 13px 22px; background: var(--pink); color: white; font: 13px Arial,sans-serif; box-shadow: 0 5px 14px #e98cac55; transition: .2s; }
+    .btn:hover { background: var(--deep); transform: translateY(-2px); }
+    .btn.secondary { color: var(--deep); background: #ffe4ed; border: 1px solid #f4b4ca; box-shadow: none; }
+    footer { text-align: center; color: #bd8499; font: 11px Arial,sans-serif; letter-spacing: .15em; padding-top: 30px; }
+
+    .float-heart { position: fixed; z-index: 5; bottom: -35px; pointer-events: none; color: #ed82a5; animation: rise linear forwards; }
+    @keyframes rise { 0% { transform: translateY(0) rotate(0); opacity: 0; } 15% { opacity: .9; } 100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; } }
+    .lightbox { display: none; position: fixed; z-index: 20; inset: 0; background: #4c2438dd; padding: 20px; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 94%; max-height: 85vh; border: 5px solid white; border-radius: 12px; }
+    .close { position: absolute; right: 20px; top: 12px; color: white; border: 0; background: transparent; font-size: 36px; }
+    @media(max-width:560px) {
+      .wrap { width: 93%; }
+      header { padding-top: 34px; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .gallery img { height: 145px; }
+      .gallery img:last-child { grid-column: span 2; height: 190px; }
+      .letter-card p { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">A little letter from my heart</div>
+    <header>
+      <div class="heart-big">💗</div>
+      <div class="eyebrow">For someone very special</div>
+      <h1>I'm Sorry, My Love</h1>
+      <p class="intro">Ada sesuatu yang ingin aku sampaikan dari lubuk hatiku.</p>
+      <div class="divider"></div>
+    </header>
+
+    <section class="letter-card">
+      <h2>Untuk Kamu, Sayang</h2>
+      <img class="photo-main" src="images/foto1.jpg" alt="Foto kenangan kita">
+      <p>
+        Sayang, aku ingin meminta maaf dengan tulus atas sikap dan kata-kataku
+        yang mungkin sudah membuatmu kecewa atau terluka. Aku sadar bahwa
+        terkadang aku terlalu terbawa emosi, kurang memahami perasaanmu,
+        dan belum bisa menjadi pendengar yang baik.
+      </p>
+      <p>
+        Aku tidak ingin mencari alasan untuk membenarkan kesalahanku.
+        Aku hanya ingin mengakui bahwa aku salah dan bahwa perasaanmu
+        sangat berarti bagiku. Maaf karena sudah membuat hatimu sedih.
+      </p>
+      <p>
+        Aku tahu kata maaf saja tidak cukup. Aku ingin membuktikannya lewat
+        sikap, belajar lebih sabar, lebih jujur, dan lebih mengerti apa yang
+        kamu rasakan. Aku juga ingin memberi ruang untukmu jika kamu
+        membutuhkannya. Aku tidak akan memaksamu untuk langsung baik-baik saja.
+      </p>
+      <p>
+        Terima kasih karena sudah menjadi bagian berharga dalam hidupku.
+        Aku masih ingin membuat banyak kenangan indah bersamamu, tetapi
+        yang paling penting, aku ingin hubungan ini menjadi tempat yang
+        aman dan nyaman untuk kita berdua.
+      </p>
+      <p class="center"><strong>Aku benar-benar minta maaf. I love you. 💗</strong></p>
+      <p class="signature">Dengan tulus dan penuh sayang,<br>Someone who cares about you ♡</p>
+
+      <div class="divider"></div>
+      <h2 class="gallery-title">Our Little Memories</h2>
+      <p class="center">Kenangan indah yang selalu ingin aku jaga.</p>
+      <div class="gallery">
+        <img src="images/foto1.jpg" alt="Kenangan pertama" data-full="images/foto1.jpg">
+        <img src="images/foto2.jpg" alt="Kenangan kedua" data-full="images/foto2.jpg">
+        <img src="images/foto3.jpg" alt="Kenangan ketiga" data-full="images/foto3.jpg">
+      </div>
+      <div class="caption">Klik foto untuk melihatnya lebih besar.</div>
+
+      <div class="buttons">
+        <button class="btn" id="musicBtn" type="button">♫ Putar Musik</button>
+        <button class="btn secondary" id="heartBtn" type="button">Kirim Hati 💗</button>
+      </div>
+      <audio id="music" src="music/musik.mp3" loop preload="none"></audio>
+      <p class="center" style="color:#c65d83">Semoga kita bisa saling memahami dan tumbuh menjadi lebih baik. ♡</p>
+    </section>
+    <footer>MADE WITH LOVE · A SINCERE APOLOGY</footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto kenangan">
+    <button class="close" id="close" aria-label="Tutup">×</button>
+    <img id="largePhoto" src="" alt="Foto kenangan ukuran besar">
+  </div>
+
+  <script>
+    function makeHeart() {
+      const heart = document.createElement("span");
+      heart.className = "float-heart";
+      heart.textContent = Math.random() > .3 ? "♥" : "♡";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (14 + Math.random() * 22) + "px";
+      heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      heart.addEventListener("animationend", () => heart.remove());
+    }
+    setInterval(makeHeart, 650);
+
+    document.getElementById("heartBtn").addEventListener("click", () => {
+      for (let i = 0; i < 18; i++) setTimeout(makeHeart, i * 100);
+    });
+
+    const audio = document.getElementById("music");
+    const musicBtn = document.getElementById("musicBtn");
+    musicBtn.addEventListener("click", async () => {
+      if (audio.paused) {
+        try {
+          await audio.play();
+          musicBtn.textContent = "Ⅱ Jeda Musik";
+        } catch (e) {
+          alert("Musik belum ditemukan. Pastikan file music/musik.mp3 sudah diunggah.");
+        }
+      } else {
+        audio.pause();
+        musicBtn.textContent = "♫ Putar Musik";
+      }
+    });
+
+    const lightbox = document.getElementById("lightbox");
+    const largePhoto = document.getElementById("largePhoto");
+    document.querySelectorAll(".gallery img").forEach(photo => {
+      photo.addEventListener("click", () => {
+        largePhoto.src = photo.dataset.full;
+        lightbox.classList.add("open");
+      });
+    });
+    function closePhoto() {
+      lightbox.classList.remove("open");
+      largePhoto.src = "";
+    }
+    document.getElementById("close").addEventListener("click", closePhoto);
+    lightbox.addEventListener("click", e => { if (e.target === lightbox) closePhoto(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") closePhoto(); });
+  </script>
+</body>
+</html>
